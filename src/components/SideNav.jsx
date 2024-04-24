@@ -1,35 +1,39 @@
 import React from 'react';
 import './SideNav.css';
 import logoImage from '../assets/icons/hotstarLogo.svg';
-import account_icon from '../assets/icons/account_icon.svg';
-import home_icon from '../assets/icons/home_icon.svg';
-import movie_icon from '../assets/icons/movie_icon.svg';
-import search_icon from '../assets/icons/search_icon.png';
-import tennis_icon from '../assets/icons/tennis_icon.svg';
-import tv_icon from '../assets/icons/tv_icon.svg';
+import accountIcon from '../assets/icons/account_icon.svg';
+import homeIcon from '../assets/icons/home_icon.svg';
+import movieIcon from '../assets/icons/movie_icon.svg';
+import searchIcon from '../assets/icons/search_icon.png';
+import tennisIcon from '../assets/icons/tennis_icon.svg';
+import tvIcon from '../assets/icons/tv_icon.svg';
 
+const SideNav = ({ setIsHovered }) => {
+  const handleHover = () => {
+    setIsHovered(true);
+  };
 
-const SideNav = () => {
+  const handleLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
     <div className="sidenav">
       <div className="logo-container">
-        <img src={logoImage} alt="Logo" className="logo" />
+        <img src={logoImage} alt="Hotstar Logo" className="logo" />
       </div>
       <div className="navigation">
         <ul>
-        <li><img src={account_icon} alt="Home" className="icon" /></li>
-        <li><img src={search_icon} alt="Home" className="icon" /></li>
-          <li><img src={home_icon} alt="Home" className="icon" /></li>
-          <li><img src={tv_icon} alt="About" className="icon" /></li>
-          <li><img src={movie_icon} alt="Services" className="icon" /></li>
-          <li><img src={tennis_icon} alt="Contact" className="icon" /></li>
+          <li onMouseEnter={handleHover} onMouseLeave={handleLeave}><img src={accountIcon} alt="Account" className="icon" /></li>
+          <li onMouseEnter={handleHover} onMouseLeave={handleLeave}><img src={searchIcon} alt="Search" className="icon" /></li>
+          <li onMouseEnter={handleHover} onMouseLeave={handleLeave}><img src={homeIcon} alt="Home" className="icon" /></li>
+          <li onMouseEnter={handleHover} onMouseLeave={handleLeave}><img src={tvIcon} alt="TV" className="icon" /></li>
+          <li onMouseEnter={handleHover} onMouseLeave={handleLeave}><img src={movieIcon} alt="Movies" className="icon" /></li>
+          <li onMouseEnter={handleHover} onMouseLeave={handleLeave}><img src={tennisIcon} alt="Tennis" className="icon" /></li>
         </ul>
       </div>
     </div>
   );
 };
-
-
-
 
 export default SideNav;

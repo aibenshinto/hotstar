@@ -1,23 +1,44 @@
-body {
-  margin: 0;
-  padding: 0;
-}
 .app {
-  display: grid;
-  grid-template-columns: 200px 1fr; /* Sidebar width and main content area */
-  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  position: relative;
 }
+
 
 .sidebar {
-  z-index: 1;
-  background-color: #333;
-  color: #fff;
-  grid-column: 1 / 2;
-  width: fit-content;
+  position: relative;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0)); /* Initial transparent background */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+
 }
 
+.hover-grid {
+ margin-left: 1vh;
+  position: absolute;
+  top: 0;
+  left: 10vh;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+ /* Initial transparent background */
+  z-index: 1; /* Ensure hover grid appears above main content */
+  transition: background-color 0.3s ease;
+}
+
+.sidebar:hover {
+  background-color: rgba(0, 0, 0, 1); /* Black background on hover */
+}
+
+
 .main-content {
-  z-index: 0;
-  padding: 20px;
-  grid-column: 2 / 3; 
+  
+  background-color: #f5f5f5; /* Example background color */
+  color: #333; /* Example text color */
+  height: 100vh;
+  width: 100%; /* Adjust width to account for sidebar and hover grid */
+  position: absolute;
+  top: 0;
+ 
+  bottom: 0;
+  
+  z-index: -1; /* Ensure main content is behind sidebar and hover grid */
 }

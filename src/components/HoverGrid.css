@@ -1,0 +1,35 @@
+.hover-grid-container {
+  
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 500px;/* Adjust width as needed */
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Horizontal gradient */
+  color: #fff;
+
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align items to the left */
+  justify-content: center; /* Justify items to the top */
+   /* Add padding for spacing */
+}
+
+.icon-list {
+  list-style-type: none;
+  padding: 0;
+  padding-top: 10vh;
+  margin: 0;
+}
+
+.icon-list li {
+ 
+  padding: 25px 0; /* Add vertical padding to create space between items */
+  cursor: pointer;
+}
+
+.icon-list li:hover {
+  background-color: #555;
+  color: #fff; /* Optional: Change text color on hover */
+}
