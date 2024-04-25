@@ -1,8 +1,13 @@
 import React from 'react';
-import './MainContent.css';
+import '../style/MainContent.css';
 import sample_video from '../assets/videos/sample_video.mp4';
 import deadpool from '../assets/icons/deadpool.png';
-import Card from './Card'; // Import your Card component
+import sample_movie1 from '../assets/icons/sample_movie1.webp';
+import sample_movie2 from '../assets/icons/sample_movie2.webp';
+import sample_movie3 from '../assets/icons/sample_movie3.webp';
+import sample_movie4 from '../assets/icons/sample_movie4.webp';
+import sample_movie5 from '../assets/icons/sample_movie5.webp';
+import Card from './Card'; 
 
 const MainContent = () => {
   return (
@@ -27,22 +32,26 @@ const MainContent = () => {
             </div>
           </div>
 
-          {/* Rows with Text Content */}
+          {/* Row 2 */}
           <div className="grid-row">
             <div className="grid-column bold-text">
               <strong>2024 English U/A 16+</strong>
             </div>
           </div>
+
+          {/* Row 3 */}
           <div className="grid-row">
             <div className="grid-column">
               Wolverine is recovering from his injuries when he crosses paths with the loudmouth, Deadpool. They team up to defeat a common enemy.
             </div>
           </div>
+
+          {/* Row 4 */}
           <div className="grid-row">
             <div className="grid-column bold-text">Action | Comedy</div>
           </div>
 
-          {/* Last Row with Buttons */}
+          {/* Last Row with Two Columns */}
           <div className="grid-row">
             <div className="grid-column wider-column">
               <button className="long-button">Subscribe to Watch</button>
@@ -54,32 +63,30 @@ const MainContent = () => {
         </div>
       </div>
 
-       {/* Horizontal List of Cards */}
-       <div className="cards-container">
-        <h2 className="cards-title">Featured Cards</h2>
-        <div className="horizontal-cards">
-          {/* Render Card components */}
-          <Card
-            title="Card 1"
-            description="Description for Card 1"
-            imageUrl="https://placekitten.com/200/300" // Example image URL
-          />
-          <Card
-            title="Card 2"
-            description="Description for Card 2"
-            imageUrl="https://placekitten.com/200/300" // Example image URL
-          />
-          <Card
-            title="Card 3"
-            description="Description for Card 3"
-            imageUrl="https://placekitten.com/200/300" // Example image URL
-          />
+      <div className="card-section">
+        <div className="card-container">
+          <Card imageUrl={sample_movie1} />
+          <Card imageUrl={sample_movie2} />
+          <Card imageUrl={sample_movie3} />
+          <Card imageUrl={sample_movie4} />
+          <Card imageUrl={sample_movie5} />
+          <Card imageUrl={sample_movie1} />
           {/* Add more Card components as needed */}
         </div>
+        <div className="card-container">
+          <Card imageUrl={sample_movie2} />
+          <Card imageUrl={sample_movie5} />
+          <Card imageUrl={sample_movie3} />
+          <Card imageUrl={sample_movie1} />
+          <Card imageUrl={sample_movie4} />
+          <Card imageUrl={sample_movie5} />
+          {/* Add more Card components as needed */}
+        </div>
+
+
       </div>
     </div>
   );
 };
-
 
 export default MainContent;

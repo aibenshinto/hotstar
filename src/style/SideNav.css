@@ -1,6 +1,6 @@
 
 .sidenav {
-    /* background-color: #333; */
+  
     color: #fff;
     height: 100vh;
     width: fit-content;
@@ -44,9 +44,7 @@
     align-items: center; 
   }
   
-  /* .navigation li:hover {
-    background-color: #555;
-  } */
+
   .navigation li img {
   
     filter: brightness(0) invert(1); /* Apply CSS filter to change icon color to white */

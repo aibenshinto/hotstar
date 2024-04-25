@@ -1,5 +1,5 @@
 import React from 'react';
-import './SideNav.css';
+import '../style/SideNav.css';
 import logoImage from '../assets/icons/hotstarLogo.svg';
 import accountIcon from '../assets/icons/account_icon.svg';
 import homeIcon from '../assets/icons/home_icon.svg';

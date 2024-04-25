@@ -1,8 +1,8 @@
 import React from 'react';
-import './HoverGrid.css';
+import '../style/HoverGrid.css';
 
 const HoverGrid = () => {
-  // Array of icon names
+
   const iconNames = ['Account', 'Search', 'Home', 'TV', 'Movies', 'Tennis'];
 
   return (

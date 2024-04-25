@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './style/App.css';
 import SideNav from './components/SideNav';
 import HoverGrid from './components/HoverGrid';
 import MainContent from './components/MainContent';
