@@ -1,7 +1,8 @@
 import React from 'react';
 import './MainContent.css';
-import sample_video from '../assets/videos/sample_video.mp4'; // Import the video file
-import deadpool from '../assets/icons/deadpool.png'; // Import the image file
+import sample_video from '../assets/videos/sample_video.mp4';
+import deadpool from '../assets/icons/deadpool.png';
+import Card from './Card'; // Import your Card component
 
 const MainContent = () => {
   return (
@@ -26,31 +27,56 @@ const MainContent = () => {
             </div>
           </div>
 
-          {/* Row 2 */}
+          {/* Rows with Text Content */}
           <div className="grid-row">
-            <div className="grid-column">2024 English U/A 16+</div>
+            <div className="grid-column bold-text">
+              <strong>2024 English U/A 16+</strong>
+            </div>
+          </div>
+          <div className="grid-row">
+            <div className="grid-column">
+              Wolverine is recovering from his injuries when he crosses paths with the loudmouth, Deadpool. They team up to defeat a common enemy.
+            </div>
+          </div>
+          <div className="grid-row">
+            <div className="grid-column bold-text">Action | Comedy</div>
           </div>
 
-          {/* Row 3 */}
+          {/* Last Row with Buttons */}
           <div className="grid-row">
-            <div className="grid-column">Wolverine is recovering from his injuries when 
-            he crosses paths with the loudmouth, Deadpool. 
-            They team up to defeat a common enemy.</div>
-          </div>
-
-          {/* Row 4 */}
-          <div className="grid-row">
-            <div className="grid-column">Action | Comedy</div>
-          </div>
-
-          {/* Last Row with Two Columns */}
-          <div className="grid-row">
-            <div className="grid-column">Column 1</div>
-            <div className="grid-column">Column 2</div>
+            <div className="grid-column wider-column">
+              <button className="long-button">Subscribe to Watch</button>
+            </div>
+            <div className="grid-column shorter-column">
+              <button className="short-button">+</button>
+            </div>
           </div>
         </div>
       </div>
-      
+
+       {/* Horizontal List of Cards */}
+       <div className="cards-container">
+        <h2 className="cards-title">Featured Cards</h2>
+        <div className="horizontal-cards">
+          {/* Render Card components */}
+          <Card
+            title="Card 1"
+            description="Description for Card 1"
+            imageUrl="https://placekitten.com/200/300" // Example image URL
+          />
+          <Card
+            title="Card 2"
+            description="Description for Card 2"
+            imageUrl="https://placekitten.com/200/300" // Example image URL
+          />
+          <Card
+            title="Card 3"
+            description="Description for Card 3"
+            imageUrl="https://placekitten.com/200/300" // Example image URL
+          />
+          {/* Add more Card components as needed */}
+        </div>
+      </div>
     </div>
   );
 };
